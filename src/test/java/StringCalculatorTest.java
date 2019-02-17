@@ -54,6 +54,9 @@ public class StringCalculatorTest {
 	    assertEquals("Negatives not allowed: [-6, -18]", exception.getMessage());
 	}
 
-	
+	@Test
+	public void biggetThan1000InputShouldBeIgnored() {
+		assertEquals(1+1000+3,sc.Add("1,1000,1003,3"));
+	}
 
 }
