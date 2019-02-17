@@ -21,5 +21,10 @@ public class StringCalculatorTest {
 	public void emptyStringShouldReturnZero() {
 		assertEquals(0,sc.Add(" "));
 	}
+	
+	@Test
+	public void twoNumbersInputShouldReturnItsSum() {
+		assertEquals(5, sc.Add("2,3"));
+	}
 
 }

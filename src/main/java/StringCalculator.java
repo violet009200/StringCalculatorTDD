@@ -7,12 +7,16 @@ public class StringCalculator {
 		if(numbers == " ") {
 			return 0;
 		}
+		int sumValue = 0;
 		
 		String[] numberArray = numbers.split(",");
 		
+		for(String number: numberArray) {
+			sumValue+= Integer.parseInt(number);
+		}
 		
 		
-		return Integer.parseInt(numbers);
+		return sumValue;
 		
 	}
 
