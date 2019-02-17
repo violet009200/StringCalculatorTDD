@@ -36,5 +36,10 @@ public class StringCalculatorTest {
 	public void newLineIsUsedBetweenNumbersShouldReturnTheirSum() {
 		assertEquals(6, sc.Add("1\n2,3"));
 	}
+	
+	@Test
+	public void whenDelimitorChangedUsedItToSeperateInput() {
+		assertEquals(3+6+15, sc.Add("//;n3;6;15"));
+	}
 
 }
