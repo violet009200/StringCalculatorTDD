@@ -17,6 +17,9 @@ public class StringCalculatorTest {
 		assertEquals(1,sc.Add("1"));
 	}
 	
-
+	@Test
+	public void emptyStringShouldReturnZero() {
+		assertEquals(0,sc.Add(" "));
+	}
 
 }
