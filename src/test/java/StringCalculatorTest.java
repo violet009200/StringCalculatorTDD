@@ -1,12 +1,22 @@
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class StringCalculatorTest {
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	StringCalculator sc;
+	
+	@Before
+	public void setUp() {
+		 sc= new StringCalculator();
 	}
+	
+	@Test
+	public void singleInputShouldReturnItsValue() {
+		assertEquals(1,sc.Add("1"));
+	}
+	
+
 
 }
