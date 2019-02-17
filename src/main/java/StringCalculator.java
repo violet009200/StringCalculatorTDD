@@ -9,7 +9,7 @@ public class StringCalculator {
 		}
 		int sumValue = 0;
 		
-		String[] numberArray = numbers.split(",");
+		String[] numberArray = numbers.split(",|\n");
 		
 		for(String number: numberArray) {
 			if(!number.trim().isEmpty())

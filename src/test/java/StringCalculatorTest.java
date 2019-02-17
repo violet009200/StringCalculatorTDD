@@ -31,5 +31,10 @@ public class StringCalculatorTest {
 	public void anyNumberofNumbersIsUserForInputShouldReturnTheirSum() {
 		assertEquals(1+2+3+4+5+6+7,sc.Add("1,2,3,4,5,6,7"));
 	}
+	
+	@Test
+	public void newLineIsUsedBetweenNumbersShouldReturnTheirSum() {
+		assertEquals(6, sc.Add("1\n2,3"));
+	}
 
 }
