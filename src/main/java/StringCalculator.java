@@ -12,7 +12,8 @@ public class StringCalculator {
 		String[] numberArray = numbers.split(",");
 		
 		for(String number: numberArray) {
-			sumValue+= Integer.parseInt(number);
+			if(!number.trim().isEmpty())
+				sumValue+= Integer.parseInt(number);
 		}
 		
 		

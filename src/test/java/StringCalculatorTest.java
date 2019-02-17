@@ -26,5 +26,10 @@ public class StringCalculatorTest {
 	public void twoNumbersInputShouldReturnItsSum() {
 		assertEquals(5, sc.Add("2,3"));
 	}
+	
+	@Test
+	public void anyNumberofNumbersIsUserForInputShouldReturnTheirSum() {
+		assertEquals(1+2+3+4+5+6+7,sc.Add("1,2,3,4,5,6,7"));
+	}
 
 }
