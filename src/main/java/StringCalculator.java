@@ -13,8 +13,9 @@ public class StringCalculator {
 		String delimiter = ",|\n";
 		String numbersWithOutDelimiter = numbers;
 		if(numbers.startsWith("//")) {
-			delimiter = numbers.substring(numbers.indexOf("//")+2,numbers.indexOf("//")+3);
-			numbersWithOutDelimiter = numbers.substring(numbers.indexOf("n")+1);
+			delimiter = numbers.substring(numbers.indexOf("//")+2,numbers.indexOf("\n"));
+			System.out.println(delimiter);
+			numbersWithOutDelimiter = numbers.substring(numbers.indexOf("\n")+1);
 		}
 		
 		String[] numberArray = numbersWithOutDelimiter.split(delimiter);
@@ -42,7 +43,8 @@ public class StringCalculator {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		StringCalculator s = new StringCalculator();
-		System.out.println(s.Add(""));
+		System.out.println(s.Add("//;\n3;6;15"));
+		System.out.println(s.Add("//***\\n1***2***3"));
 	}
 
 }

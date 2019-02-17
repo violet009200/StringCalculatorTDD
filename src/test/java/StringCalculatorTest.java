@@ -39,7 +39,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void whenDelimitorChangedUsedItToSeperateInput() {
-		assertEquals(3+6+15, sc.Add("//;n3;6;15"));
+		assertEquals(3+6+15, sc.Add("//;\n3;6;15"));
 	}
 	
 	@Test
@@ -58,5 +58,10 @@ public class StringCalculatorTest {
 	public void biggetThan1000InputShouldBeIgnored() {
 		assertEquals(1+1000+3,sc.Add("1,1000,1003,3"));
 	}
+	
+//	@Test
+//	public void shouldAccecptAnyLengthOfDelimitor() {
+//		assertEquals(6,sc.Add("//***\\n1***2***3"));
+//	}
 
 }
