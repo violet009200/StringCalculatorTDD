@@ -1,3 +1,5 @@
+import java.awt.List;
+import java.util.ArrayList;
 
 public class StringCalculator {
 	
@@ -16,12 +18,20 @@ public class StringCalculator {
 		}
 		
 		String[] numberArray = numbersWithOutDelimiter.split(delimiter);
+		ArrayList negativeNumbers = new ArrayList();
 		
 		for(String number: numberArray) {
-			if(!number.trim().isEmpty())
+			if(!number.trim().isEmpty()) {
+				int numberInt = Integer.parseInt(number.trim());
+				if(numberInt< 0) {
+					negativeNumbers.add(numberInt);
+				}
 				sumValue+= Integer.parseInt(number);
+			}
 		}
-		
+		if(negativeNumbers.size()>0) {
+			throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString());
+		}
 		
 		return sumValue;
 		
@@ -30,7 +40,7 @@ public class StringCalculator {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		StringCalculator s = new StringCalculator();
-		s.Add("");
+		System.out.println(s.Add(""));
 	}
 
 }
